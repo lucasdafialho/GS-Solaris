@@ -1,0 +1,16 @@
+D:\GS\Solaris\src\main\java\solaris\controladores\EnergiaSolarResource.java
+D:\GS\Solaris\src\main\java\solaris\controladores\UsuarioResource.java
+D:\GS\Solaris\src\main\java\solaris\entidades\CalculoEnergiaSolar.java
+D:\GS\Solaris\src\main\java\solaris\entidades\EnergiaSolar.java
+D:\GS\Solaris\src\main\java\solaris\entidades\Login.java
+D:\GS\Solaris\src\main\java\solaris\entidades\Usuario.java
+D:\GS\Solaris\src\main\java\solaris\filter\CorsFilter.java
+D:\GS\Solaris\src\main\java\solaris\infraestrutura\DatabaseConfig.java
+D:\GS\Solaris\src\main\java\solaris\infraestrutura\Log4jLogger.java
+D:\GS\Solaris\src\main\java\solaris\Main.java
+D:\GS\Solaris\src\main\java\solaris\MyResource.java
+D:\GS\Solaris\src\main\java\solaris\repositorios\_RepositorioBase.java
+D:\GS\Solaris\src\main\java\solaris\repositorios\CalculoEnergiaSolarRepositorio.java
+D:\GS\Solaris\src\main\java\solaris\repositorios\EnergiaSolarRepositorio.java
+D:\GS\Solaris\src\main\java\solaris\repositorios\LoginRepositorio.java
+D:\GS\Solaris\src\main\java\solaris\repositorios\UsuarioRepositorio.java
