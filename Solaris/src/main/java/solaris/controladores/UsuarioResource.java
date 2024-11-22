@@ -81,7 +81,7 @@ public class UsuarioResource {
     public Response deletarUsuario(@PathParam("id") int id) {
         try {
             usuarioService.deletar(id);
-            return Response.status(Response.Status.NO_CONTENT).build();
+            return Response.status(Response.Status.OK).entity("Usuário deletado com sucesso.").build();
         } catch (IllegalArgumentException e) {
             return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
         } catch (Exception e) {
@@ -89,6 +89,7 @@ public class UsuarioResource {
                     .entity("Erro ao deletar usuário: " + e.getMessage()).build();
         }
     }
+
 
     @POST
     @Path("/login")

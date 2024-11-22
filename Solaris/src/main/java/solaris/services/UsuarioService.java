@@ -41,7 +41,7 @@ public class UsuarioService {
         }
     }
 
-    public void deletar(int id) {
+    public boolean deletar(int id) {
         try {
             usuarioRepositorio.remover(id);
             logger.info("Usuário removido com sucesso: ID " + id);
@@ -49,6 +49,7 @@ public class UsuarioService {
             logger.error("Erro ao remover usuário: " + e.getMessage());
             throw e;
         }
+        return false;
     }
 
     public Optional<Usuario> buscarPorId(int id) {

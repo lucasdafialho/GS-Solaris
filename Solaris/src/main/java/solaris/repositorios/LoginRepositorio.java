@@ -1,6 +1,7 @@
 package solaris.repositorios;
 
 import solaris.entidades.Login;
+import solaris.infraestrutura.DatabaseConfig;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,15 +18,20 @@ public class LoginRepositorio implements _RepositorioBase<Login> {
     @Override
     public void cadastrar(Login login) {
         String sql = "INSERT INTO T_LOGIN_SOLARIS (SENHA, EMAIL, ID_USUARIO) VALUES (?, ?, ?)";
-        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, login.getSenha());
             stmt.setString(2, login.getEmail());
             stmt.setLong(3, login.getIdUsuario());
-            stmt.executeUpdate();
+            int rowsAffected = stmt.executeUpdate();
+            if (rowsAffected == 0) {
+                throw new RuntimeException("Falha ao cadastrar login.");
+            }
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao cadastrar login: " + e.getMessage());
+            throw new RuntimeException("Erro ao cadastrar login: " + e.getMessage(), e);
         }
     }
+
 
     @Override
     public void atualizar(Login login, int id) {
