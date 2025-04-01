@@ -110,8 +110,8 @@
                 <version>3.13.0</version>
                 <inherited>true</inherited>
                 <configuration>
-                    <source>8</source>
-                    <target>23</target>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
             <plugin>
